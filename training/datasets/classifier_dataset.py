@@ -47,9 +47,9 @@ def prepare_bit_masks(mask):
     masks.append(ones)
     return masks
 
-sys.path.insert(1, 'D:\\University And Papers\\VESSL\\dfdc_deepfake_challenge')
+sys.path.insert(1, '.\\dfdc_deepfake_challenge')
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('D:\\University And Papers\\VESSL\\dfdc_deepfake_challenge/libs/shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('./shape_predictor_68_face_landmarks.dat')
 
 
 def blackout_convex_hull(img):
