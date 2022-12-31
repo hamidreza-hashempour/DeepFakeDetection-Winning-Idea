@@ -1,0 +1,25 @@
+2022-12-31 16:05:19,295 INFO    MainThread:29916 [wandb_setup.py:_flush():68] Configure stats pid to 29916
+2022-12-31 16:05:19,295 INFO    MainThread:29916 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Green\.config\wandb\settings
+2022-12-31 16:05:19,296 INFO    MainThread:29916 [wandb_setup.py:_flush():68] Loading settings from D:\University And Papers\VESSL\dfdc_deepfake_challenge\wandb\settings
+2022-12-31 16:05:19,296 INFO    MainThread:29916 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-12-31 16:05:19,296 INFO    MainThread:29916 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'training\\pipelines\\train_classifier.py', 'program': 'D:\\University And Papers\\VESSL\\dfdc_deepfake_challenge\\training\\pipelines\\train_classifier.py'}
+2022-12-31 16:05:19,297 INFO    MainThread:29916 [wandb_init.py:_log_setup():476] Logging user logs to D:\University And Papers\VESSL\dfdc_deepfake_challenge\wandb\run-20221231_160519-3rz6xgmb\logs\debug.log
+2022-12-31 16:05:19,297 INFO    MainThread:29916 [wandb_init.py:_log_setup():477] Logging internal logs to D:\University And Papers\VESSL\dfdc_deepfake_challenge\wandb\run-20221231_160519-3rz6xgmb\logs\debug-internal.log
+2022-12-31 16:05:19,317 INFO    MainThread:29916 [wandb_init.py:init():516] calling init triggers
+2022-12-31 16:05:19,317 INFO    MainThread:29916 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'network': 'DeepFakeClassifier', 'encoder': 'tf_efficientnet_b7_ns', 'batches_per_epoch': 10000, 'size': 380, 'fp16': True, 'optimizer': {'batch_size': 2, 'type': 'SGD', 'momentum': 0.9, 'weight_decay': 0.0001, 'learning_rate': 0.01, 'nesterov': True, 'schedule': {'type': 'poly', 'mode': 'step', 'epochs': 20, 'params': {'max_iter': 100500}}}, 'normalize': {'mean': [0.485, 0.456, 0.406], 'std': [0.229, 0.224, 0.225]}, 'losses': {'BinaryCrossentropy': 1}}
+2022-12-31 16:05:19,330 INFO    MainThread:29916 [wandb_init.py:init():569] starting backend
+2022-12-31 16:05:19,330 INFO    MainThread:29916 [wandb_init.py:init():573] setting up manager
+2022-12-31 16:05:19,357 INFO    MainThread:29916 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=spawn, using: spawn
+2022-12-31 16:05:19,373 INFO    MainThread:29916 [wandb_init.py:init():580] backend started and connected
+2022-12-31 16:05:19,443 INFO    MainThread:29916 [wandb_init.py:init():658] updated telemetry
+2022-12-31 16:05:19,567 INFO    MainThread:29916 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2022-12-31 16:05:20,296 INFO    MainThread:29916 [wandb_run.py:_on_init():2006] communicating current version
+2022-12-31 16:05:20,402 INFO    MainThread:29916 [wandb_run.py:_on_init():2010] got version response 
+2022-12-31 16:05:20,402 INFO    MainThread:29916 [wandb_init.py:init():728] starting run threads in backend
+2022-12-31 16:05:20,916 INFO    MainThread:29916 [wandb_run.py:_console_start():1986] atexit reg
+2022-12-31 16:05:20,930 INFO    MainThread:29916 [wandb_run.py:_redirect():1844] redirect: SettingsConsole.WRAP_RAW
+2022-12-31 16:05:20,930 INFO    MainThread:29916 [wandb_run.py:_redirect():1909] Wrapping output streams.
+2022-12-31 16:05:20,930 INFO    MainThread:29916 [wandb_run.py:_redirect():1931] Redirects installed.
+2022-12-31 16:05:20,932 INFO    MainThread:29916 [wandb_init.py:init():765] run started, returning control to user process
+2022-12-31 16:06:14,606 WARNING MsgRouterThr:29916 [router.py:message_loop():77] message_loop has been closed

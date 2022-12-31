@@ -1,0 +1,52 @@
+D:\University And Papers\VESSL\dfdc_deepfake_challenge\apex\apex\apex\__init__.py:68: DeprecatedFeatureWarning: apex.amp is deprecated and will be removed by the end of February 2023. Use [PyTorch AMP](https://pytorch.org/docs/stable/amp.html)
+  warnings.warn(msg, DeprecatedFeatureWarning)
+Selected optimization level O1:  Insert automatic casts around Pytorch functions and Tensor methods.
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Warning:  multi_tensor_applier fused unscale kernel is unavailable, possibly because apex was installed without --cuda_ext --cpp_ext. Using Python fallback.  Original ImportError was: ModuleNotFoundError("No module named 'amp_C'")
+real 674 fakes 851 mode val
+real 2651 fakes 2651 mode train
+training epoch 0
+
+Epoch 0:   0% 0/10000 [03:36<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\University And Papers\VESSL\dfdc_deepfake_challenge\training\pipelines\train_classifier.py", line 413, in <module>
+    main()
+  File "D:\University And Papers\VESSL\dfdc_deepfake_challenge\training\pipelines\train_classifier.py", line 255, in main
+    train_epoch(current_epoch, loss_functions, model, optimizer, scheduler, train_data_loader, summary_writer, conf,
+  File "D:\University And Papers\VESSL\dfdc_deepfake_challenge\training\pipelines\train_classifier.py", line 360, in train_epoch
+    out_labels = model(imgs)
+  File "D:\APPs\Anaconda\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\APPs\Anaconda\lib\site-packages\torch\nn\parallel\data_parallel.py", line 166, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "D:\APPs\Anaconda\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\University And Papers\VESSL\dfdc_deepfake_challenge\training\zoo\classifiers.py", line 150, in forward
+    x = self.encoder.forward_features(x)
+  File "D:\APPs\Anaconda\lib\site-packages\timm\models\efficientnet.py", line 467, in forward_features
+    x = self.conv_stem(x)
+  File "D:\APPs\Anaconda\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\APPs\Anaconda\lib\site-packages\timm\models\layers\conv2d_same.py", line 30, in forward
+    return conv2d_same(x, self.weight, self.bias, self.stride, self.padding, self.dilation, self.groups)
+  File "D:\APPs\Anaconda\lib\site-packages\timm\models\layers\conv2d_same.py", line 17, in conv2d_same
+    return F.conv2d(x, weight, bias, stride, (0, 0), dilation, groups)
+  File "D:\University And Papers\VESSL\dfdc_deepfake_challenge\apex\apex\apex\amp\wrap.py", line 28, in wrapper
+    return orig_fn(*new_args, **kwargs)
+KeyboardInterrupt

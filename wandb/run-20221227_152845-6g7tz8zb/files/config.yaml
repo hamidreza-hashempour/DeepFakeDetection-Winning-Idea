@@ -1,0 +1,89 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.7
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.12
+    start_time: 1672122525.31811
+    t:
+      1:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      - 80
+      2:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      - 80
+      3:
+      - 13
+      - 16
+      - 23
+      - 34
+      4: 3.9.12
+      5: 0.13.7
+      8:
+      - 3
+      - 5
+batches_per_epoch:
+  desc: null
+  value: 10000
+encoder:
+  desc: null
+  value: tf_efficientnet_b7_ns
+fp16:
+  desc: null
+  value: true
+losses:
+  desc: null
+  value:
+    BinaryCrossentropy: 1
+network:
+  desc: null
+  value: DeepFakeClassifier
+normalize:
+  desc: null
+  value:
+    mean:
+    - 0.485
+    - 0.456
+    - 0.406
+    std:
+    - 0.229
+    - 0.224
+    - 0.225
+optimizer:
+  desc: null
+  value:
+    batch_size: 2
+    learning_rate: 0.01
+    momentum: 0.9
+    nesterov: true
+    schedule:
+      epochs: 20
+      mode: step
+      params:
+        max_iter: 100500
+      type: poly
+    type: SGD
+    weight_decay: 0.0001
+size:
+  desc: null
+  value: 380

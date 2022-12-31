@@ -1,0 +1,33 @@
+D:\University And Papers\VESSL\dfdc_deepfake_challenge\apex\apex\apex\__init__.py:68: DeprecatedFeatureWarning: apex.amp is deprecated and will be removed by the end of February 2023. Use [PyTorch AMP](https://pytorch.org/docs/stable/amp.html)
+  warnings.warn(msg, DeprecatedFeatureWarning)
+Selected optimization level O1:  Insert automatic casts around Pytorch functions and Tensor methods.
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O1
+cast_model_type        : None
+patch_torch_functions  : True
+keep_batchnorm_fp32    : None
+master_weights         : None
+loss_scale             : dynamic
+Warning:  multi_tensor_applier fused unscale kernel is unavailable, possibly because apex was installed without --cuda_ext --cpp_ext. Using Python fallback.  Original ImportError was: ModuleNotFoundError("No module named 'amp_C'")
+real 674 fakes 851 mode val
+real 2651 fakes 2651 mode train
+training epoch 0
+Epoch 0:   0% 0/10000 [00:16<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\University And Papers\VESSL\dfdc_deepfake_challenge\training\pipelines\train_classifier.py", line 412, in <module>
+    main()
+  File "D:\University And Papers\VESSL\dfdc_deepfake_challenge\training\pipelines\train_classifier.py", line 254, in main
+    train_epoch(current_epoch, loss_functions, model, optimizer, scheduler, train_data_loader, summary_writer, conf,
+  File "D:\University And Papers\VESSL\dfdc_deepfake_challenge\training\pipelines\train_classifier.py", line 358, in train_epoch
+    labels = sample["labels"].cuda().float()
+KeyboardInterrupt
