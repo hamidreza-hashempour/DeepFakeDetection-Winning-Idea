@@ -6,8 +6,8 @@ from collections import defaultdict
 
 from sklearn.metrics import log_loss
 from torch import topk
-sys.path.insert(1, 'D:\\University And Papers\\VESSL\\dfdc_deepfake_challenge')
-sys.path.insert(2, 'D:\\University And Papers\\VESSL\\dfdc_deepfake_challenge\\apex\\apex')
+sys.path.insert(1, '.\\dfdc_deepfake_challenge')
+sys.path.insert(2, '.\\dfdc_deepfake_challenge\\apex\\apex')
 from training import losses
 from training.datasets.classifier_dataset import DeepFakeClassifierDataset
 from training.losses import WeightedLosses
@@ -81,11 +81,11 @@ def main():
     arg('--config', metavar='CONFIG_FILE', help='path to configuration file')
     arg('--workers', type=int, default=6, help='number of cpu threads to use')
     arg('--gpu', type=str, default='0', help='List of GPUs for parallel training, e.g. 0,1,2,3')
-    arg('--output-dir', type=str, default='C:/Users/Green/Desktop/VESSL/dfdc_deepfake_challenge/data_root/weights/')
+    arg('--output-dir', type=str, default='./data_root/weights/')
     arg('--resume', type=str, default='')
     arg('--fold', type=int, default=1)
     arg('--prefix', type=str, default='classifier_')
-    arg('--data-dir', type=str, default="C:/Users/Green/Desktop/VESSL/dfdc_deepfake_challenge/data_root")
+    arg('--data-dir', type=str, default="./data_root")
     arg('--folds-csv', type=str, default='folds02.csv')
     arg('--crops-dir', type=str, default='crops')
     arg('--label-smoothing', type=float, default=0.01)
